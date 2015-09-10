@@ -1,0 +1,8 @@
+Buildfile: C:\Users\eti\Documents\Projects\Custom Widgets\MicroflowNotifications\test\deployment\build_core.xml
+
+clean:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

@@ -1,0 +1,8 @@
+Buildfile: C:\Users\eti\Documents\Projects\Custom Widgets\MicroflowNotifications\test\deployment\build_webui.xml
+
+deploy:
+    [unzip] Expanding: C:\Users\eti\Documents\Projects\Custom Widgets\MicroflowNotifications\test\widgets\MicroflowNotifications.mpk into C:\Users\eti\Documents\Projects\Custom Widgets\MicroflowNotifications\test\deployment\web\widgets
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+

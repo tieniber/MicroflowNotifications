@@ -1,0 +1,5 @@
+ShellTUI: Unable to read from stdin...exiting.
+No permission to open socket or another server is already running on localhost:8090: Address already in use: JVM_Bind
+
+-> 
+

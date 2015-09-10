@@ -1,0 +1,9 @@
+Buildfile: C:\Users\eti\Documents\Projects\Custom Widgets\MicroflowNotifications\test\deployment\build_core.xml
+
+deploy:
+    [unzip] Expanding: C:\Program Files (x86)\Mendix\5.13.1\modeler\deployment.mxz into C:\Users\eti\Documents\Projects\Custom Widgets\MicroflowNotifications\test\deployment
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

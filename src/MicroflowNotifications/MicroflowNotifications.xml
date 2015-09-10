@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="MicroflowNotifications.widget.MicroflowNotifications" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+	<name>MicroflowNotifications</name>
+	<description>The description of this widget.</description>
+
+	<icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABIklEQVQ4jZXSrU4EQRAE4G83G14A
+	A6iTJCDObPBr0SSEc/y9w7l5CCTgcFgcWU/WICBBEIIgQE7gQBAEglm4m+wd0MmIqa6q7p6eTBJV
+	aOawiwFWI3yFExzWoXwf52eJeAln6KfGMS6xXofysQXypHIrvsUG5uPZiFgfZ5ELijH3/THxWh3K
+	l7HcaRWaGheRs4+DiQ7izDBMxCBiw4Q7YdA+2HnX8Emu5U4YtHO9zTBoc99vkE8h/jlyqEKT/9Ms
+	j5pv0aavjdzhfZoq5u4idxOy6HSNZezUoTyeVboKzTaOcIOVrArNlq9veo8VfPzSfhEL9jAo/Oy2
+	h9dfxGkMC4x0zz2X3Ls4o6wDBFVonrAQr891KBe7eLNWt4eHePamkT4Bo2dLJ1mAfRsAAAAASUVO
+	RK5CYII=
+	</icon>
+
+ 	<properties>
+		<property key="mf" type="microflow" required="true">
+            <caption>Source Microflow</caption>
+            <category>Data source</category>
+            <description>Microflow which is executed to obtain the value of this notification</description> 
+            <returnType type="String"/>
+        </property>
+        <property key="interval" type="integer" defaultValue="0">
+            <caption>Refresh interval</caption>
+            <category>Behavior</category>
+            <description>The interval (in seconds) between microflow executions. If the microflow returns a non-empty string, a new notification will be generated.</description>  
+        </property>
+		<property key="runstart" type="boolean" defaultValue="false">
+			<caption>Run immediately</caption>
+			<category>Behavior</category>
+			<description>If true, the microflow will be executed immediately upon the page loading. Otherwise, it will wait until the first refresh interval.</description>
+		</property>
+		<property key="layout" type="enumeration" required="true" defaultValue="top">
+            <caption>Layout</caption>
+            <category>Notification</category>
+            <description>The location to render the notification</description>
+            <enumerationValues>
+                <enumerationValue key="top">Top</enumerationValue>
+                <enumerationValue key="topLeft">Top Left</enumerationValue>
+                <enumerationValue key="topCenter">Top Center</enumerationValue>
+                <enumerationValue key="topRight">Top Right</enumerationValue>
+                <enumerationValue key="center">Center</enumerationValue>
+                <enumerationValue key="centerLeft">Center Left</enumerationValue>
+                <enumerationValue key="centerRight">Center Right</enumerationValue>
+                <enumerationValue key="bottom">Bottom</enumerationValue>
+                <enumerationValue key="bottomLeft">Bottom Left</enumerationValue>
+                <enumerationValue key="bottomCenter">Bottom Center</enumerationValue>
+                <enumerationValue key="bottomRight">Bottom Right</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="type" type="enumeration" required="true" defaultValue="alert">
+            <caption>Type</caption>
+            <category>Notification</category>
+            <description>The type of notification to render</description>
+            <enumerationValues>
+                <enumerationValue key="alert">Alert</enumerationValue>
+                <enumerationValue key="success">Success</enumerationValue>
+                <enumerationValue key="error">Error</enumerationValue>
+                <enumerationValue key="warning">Warning</enumerationValue>
+                <enumerationValue key="information">Information</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="timeout" type="integer" required="true" defaultValue="0">
+            <caption>Timeout</caption>
+            <category>Notification</category>
+            <description>Dismiss the notification after a certain interval (milliseconds.) Enter 0 to dismiss the notification only on click</description>
+        </property>
+        <property key="maxvisible" type="integer" required="true" defaultValue="5">
+            <caption>Max Visible Notifications</caption>
+            <category>Notification</category>
+            <description>The number of notifications that can be visible at the same time. If you set this to 1, the microflow will just update the notification text if a notification is already visible.</description>
+        </property>		
+		<property key="buttons" type="object" isList= "true" required="false">
+            <caption>Buttons</caption>
+            <category>Buttons</category>
+            <description>Add rows here to create buttons in the notification. You can specify a microflow to execute, as well as a CSS class for the button.</description>
+            <properties>
+				<property key="buttonname" type="string" required="true">
+					<caption>Name</caption>
+					<category>Buttons</category>
+					<description>The name of the button, for example "OK" or "Snooze"</description>
+				</property>
+				<property key="buttonmf" type="microflow" required="true">
+					<caption>On click Microflow</caption>
+					<category>Buttons</category>
+					<description>The microflow to execute on button click.</description> 
+					<returnType type="Void"/>
+				</property>
+				<property key="buttonclass" type="string" required="false">
+					<caption>Button Class</caption>
+					<category>Buttons</category>
+					<description>Enter the CSS class of the button.</description>
+				</property>
+            </properties>
+        </property>
+	</properties>
+</widget>
+
